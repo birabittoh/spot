@@ -1,0 +1,11 @@
+services:
+  spot:
+    image: ghcr.io/birabittoh/spot:main
+    build: .
+    container_name: spot
+    restart: unless-stopped
+    volumes:
+      - data:/app/data
+
+volumes:
+  data:
